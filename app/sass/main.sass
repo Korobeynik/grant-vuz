@@ -1,0 +1,482 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+.container
+	max-width: 1300px
+	width: 100%	
+
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+
+// .wrapper
+// 	margin: 0 auto
+// 	max-width: 1600px
+// 	width: 100%
+
+header
+	position: relative
+	.header-bg
+		position: absolute
+		right: 0
+		top: 0
+		width: 30%
+	.header-bg-mobile
+		display: none	
+
+
+.baase-title
+	color: $text
+	font-size: 56px
+	font-weight: bold
+	text-align: center
+	width: 100%
+	margin-bottom: 28px
+
+.header-content
+	padding-top: 58px
+	width: 100%
+	margin-bottom: 40px
+	.logo
+		margin-bottom: 65px
+		display: inline-block
+
+.header-title
+	font-size: 56px
+	color: $blue
+	font-weight: bold
+.header-descr
+	font-size: 19px
+	margin-bottom: 25px
+
+form
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	.form-item
+		width: 48%
+		position: relative
+		height: 72px
+		border-radius: 10px
+		box-shadow: 0 0 19px 0 rgba(169, 190, 204, 0.14)
+		background-color: #fff
+		margin-bottom: 30px
+		padding: 20px
+		span
+			font-size: 14px
+			color: #aeb7c2
+			position: absolute
+			top: 12px
+		input
+			width: 100%
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			padding: 20px
+			padding-top: 40px
+			border: none
+			background-color: transparent
+		select
+			width: 100%	
+	button
+		width: 100%
+		height: 72px
+		border-radius: 5px
+		background-color: $blue
+		color: #fff
+		text-transform: uppercase
+		border: none
+		font-size: 18px
+		font-weight: bold
+		letter-spacing: 1.2px
+		transition: all 0.4s ease
+		margin-bottom: 20px
+		&:hover
+			background-color: darken($blue, 10%)
+			cursor: pointer
+	.nice-select.open:after
+		transform: rotate(0deg)		
+	.nice-select
+		width: 100%
+		border: none
+		position: absolute
+		left: 0
+		top: 0
+		background-color: transparent
+		padding-left: 20px
+		height: 100%
+		&:after
+			width: 15px
+			height: 22px
+			background-image: url('../img/arrow.svg')
+			background-repeat: no-repeat
+			background-position: 50% 50%
+			border: none
+			right: 25px
+			top: 45%
+			transform: rotate(0deg)
+		.list
+			width: 100%
+			margin-top: 0px
+		.current
+			color: #353e5d
+			font-weight: bold
+			font-size: 16px
+			margin-top: 14px			
+
+
+::-webkit-input-placeholder
+	color: #353e5d
+	font-weight: bold
+
+
+::-moz-placeholder
+	color: #353e5d
+	font-weight: bold
+
+
+
+::-ms-input-placeholder	
+	color: #353e5d
+	font-weight: bold
+
+
+
+::-webkit-textarea-placeholder
+	color: #353e5d
+	font-weight: bold
+
+
+.prize-item
+	margin-bottom: 24px
+
+.prize-item-inner
+	display: flex
+	align-items: center
+	padding: 50px 44px
+	border-radius: 10px
+	box-shadow: 0 0 19px 0 rgba(169, 190, 204, 0.34)
+	background-color: #fff
+	.title
+		font-size: 26px
+		line-height: 1
+		color: $blue
+		font-weight: bold
+		margin-bottom: 10px
+	.text
+	.prize-icon
+		width: 120px
+		height: 120px
+		border-radius: 50%
+		text-align: center
+		display: flex
+		align-items: center
+		justify-content: center
+		position: relative
+		margin-right: 20px
+		span
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%,-50%)
+			color: $yellow
+			font-size: 56px
+			font-weight: bold
+
+
+.header-images
+	position: relative
+	.img1
+		position: absolute
+		right: 35%
+		top: 50%
+	.img2
+		position: absolute
+		top: 80%
+		right: -30%
+	.img3
+		position: absolute
+		right: 45%
+		top: 80%
+		width: 100px
+	.img4
+		position: absolute
+		right: -35%
+		top: 30%
+	.prize
+		width: 166px
+		height: 166px
+		position: absolute
+		right: 25%
+		background-image: url('../img/prize.svg')
+		background-position: 50% 50%
+		background-size: 100%
+		background-repeat: no-repeat
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		flex-wrap: wrap
+		line-height: 20px
+		.p-title
+			color: #fff
+			font-weight: bold
+			font-size: 24px
+			margin-top: 10px
+			margin-bottom: 5px
+		.p-text
+			font-size: 14px
+			color: #fff
+			text-align: center
+			padding: 0 20px
+			line-height: 16px
+
+.main-content
+	padding-bottom: 150px
+
+
+footer
+	position: relative
+	// overflow-y: hidden
+	.footer-bg
+		position: absolute
+		left: 0
+		bottom: 0
+
+.footer-image
+	position: relative
+	z-index: 1
+	.f-book
+		position: absolute
+		top: 20px
+		left: 0
+
+.prize-bg-mobile
+	display: none
+
+.superprize
+	position: relative
+	.prize-bg
+		position: absolute
+		right: -5%
+		bottom: 0%
+		z-index: -1
+	.superprize-inner
+		text-align: center
+		padding: 10%
+		position: relative
+		z-index: 1
+		padding-top: 3%
+	.title
+		font-size: 56px
+		font-weight: bold
+		color: $blue
+	.prize
+		color: $yellow
+		font-size: 86px
+		font-weight: bold
+		line-height: 90px
+		margin-bottom: 10px
+	.text
+		font-size: 36px
+		font-weight: bold
+		color: $blue
+		max-width: 340px
+		margin: 0 auto
+		line-height: 40px
+		margin-bottom: 20px
+	.btn
+		max-width: 350px
+		width: 100%
+		height: 72px
+		border-radius: 5px
+		background-color: $blue
+		color: #fff
+		text-transform: uppercase
+		border: none
+		font-size: 18px
+		font-weight: bold
+		letter-spacing: 1.2px
+		transition: all 0.4s ease
+		margin-bottom: 20px
+		display: flex
+		align-items: center
+		justify-content: center
+		margin: auto
+		&:hover
+			background-color: darken($blue, 10%)
+			cursor: pointer
+			text-decoration: none
+
+
+.footer-line-inner
+	display: flex
+	justify-content: space-between
+	padding: 50px 0
+	position: relative
+	margin-top: -100px
+	.privacy
+		color: $blue
+		text-decoration: underline
+		font-size: 14px
+	.copy
+		color: #fff
+		font-size: 14px
+
+.footer-img-mobile
+	display: none
+
+
+.registration-page
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	overflow-x: hidden
+	.registration-form
+		button
+			background-color: #ffc000
+			&:hover
+				background-color: darken(#ffc000, 10%)
+	.main-content
+		padding-bottom: 200px
+		position: relative
+		z-index: 1
+	.header-bg
+		width: 105%
+		left: 0
+		//top: -50px
+	.footer-bg
+		width: 115%
+		left: -2px
+		right: -2px
+		width: 100%
+		bottom: -20px
+	.footer-bg-2
+		display: none
+	.copy
+		color: $text		
+
+
+.registration-title
+	font-size: 56px
+	font-weight: bold
+	color: $blue
+.registration-des1
+	color: #ffc000
+	font-size: 24px
+	line-height: 1.08
+	margin-bottom: 15px
+	font-weight: bold
+.registration-des2
+	color: #353e5d
+	font-size: 21px
+	line-height: 1.43
+	margin-bottom: 33px	
+.registration-des3
+	font-size: 18px
+	font-weight: 300
+	color: #353e5d
+	padding-right: 5%
+
+
+
+.registration-form
+	.container
+		display: block
+		position: relative
+		padding-left: 35px
+		margin-bottom: 12px
+		cursor: pointer
+		font-size: 14px
+		user-select: none
+		text-align: left
+		padding-right: 35px
+		margin-left: 0
+		margin-top: 10px
+		top: -4px
+		a
+			text-decoration: underline
+		input
+			position: absolute
+			opacity: 0
+			cursor: pointer
+			height: 0
+			width: 0
+
+
+	.checkmark
+		position: absolute
+		top: 0
+		left: 0
+		height: 28px
+		width: 28px
+		border-radius: 3px
+		background-color: #eee
+
+
+	.container
+		&:hover input ~ .checkmark
+			background-color: #ccc
+		input:checked ~ .checkmark
+			background-color: #416be5
+
+
+	.checkmark:after
+		content: ""
+		position: absolute
+		display: none
+
+	.container
+		input:checked ~ .checkmark:after
+			display: block
+		.checkmark:after
+			left: 10px
+			top: 3px
+			width: 8px
+			height: 15px
+			border: solid white
+			border-width: 0 2px 2px 0
+			-webkit-transform: rotate(45deg)
+			-ms-transform: rotate(45deg)
+			transform: rotate(45deg)
+
+
+@import "media" // Always at the end
